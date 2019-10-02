@@ -1,0 +1,81 @@
+let mapleader =" "
+
+" Let vim use a posix compliant shell instead of fish
+if &shell =~# 'fish$'
+    set shell=sh
+endif
+
+" PLUGINS
+
+call plug#begin('~/.vim/plugged')
+Plug 'dylanaraps/wal.vim'
+Plug 'junegunn/goyo.vim'
+Plug 'PotatoesMaster/i3-vim-syntax'
+Plug 'vim-python/python-syntax'
+Plug 'valloric/youcompleteme'
+Plug 'mattn/emmet-vim'
+Plug 'plasticboy/vim-markdown'
+Plug 'vim-airline/vim-airline'
+Plug 'dag/vim-fish'
+Plug 'easymotion/vim-easymotion'
+Plug 'kien/ctrlp.vim'
+call plug#end()
+
+" MISC
+
+set nocompatible
+filetype plugin indent on
+syntax on
+
+colorscheme wal
+
+set number
+set relativenumber
+set tabstop=4 " number of spaces per tab
+set softtabstop=4 " idem but while editing
+set expandtab " tabs are spaces
+set wildmenu " visual feedback for tab complete on commandline
+set lazyredraw 
+set showmatch " highlights matching char
+set incsearch " start searching while typing
+set hlsearch " highlight matches
+set foldenable
+set foldlevelstart=10
+
+" KEYBINDS
+
+map <leader>f :Goyo<CR> " zen mode
+" move by visual line
+map j gj
+map k gk
+" move to beginning eol
+nnoremap B ^
+nnoremap E $
+" easy buffer switching
+nnoremap <C-j> :bnext<CR>
+nnoremap <C-k> :bprevious<CR>
+nnoremap <leader>ev :vsp $MYVIMRC<CR> " edit vim keybinds
+nnoremap <leader>s :mksession<CR> " saves session to be opened by vim -S
+" backup settings
+set backup
+set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+set backupskip=/tmp/*,/private/tmp/*
+set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+set writebackup
+
+" PLUGIN SETTINGS
+
+let g:ctrlp_match_window = 'bottom,order:ttb'
+let g:ctrlp_switch_buffer = 0
+let g:ctrlp_working_path_mode = 0
+let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
+
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
+
+nmap s <Plug>(easymotion-overwin-f2)
+
+" AUTOCMDS
+
+autocmd BufWritePost .Xresources ~/.Xresources.d/ !xrdb -merge ~/.Xresources-regolith
+autocmd BufWritePost .vimrc source ~/.vimrc
