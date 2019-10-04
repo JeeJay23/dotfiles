@@ -19,6 +19,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'dag/vim-fish'
 Plug 'easymotion/vim-easymotion'
 Plug 'kien/ctrlp.vim'
+Plug 'jiangmiao/auto-pairs'
 call plug#end()
 
 " MISC
@@ -48,14 +49,22 @@ map <leader>f :Goyo<CR> " zen mode
 " move by visual line
 map j gj
 map k gk
+
 " move to beginning eol
 nnoremap B ^
 nnoremap E $
+
 " easy buffer switching
 nnoremap <C-j> :bnext<CR>
 nnoremap <C-k> :bprevious<CR>
+
 nnoremap <leader>ev :vsp $MYVIMRC<CR> " edit vim keybinds
 nnoremap <leader>s :mksession<CR> " saves session to be opened by vim -S
+
+" easy insert date
+" :nnoremap <F5> "=strftime("%A, %H:%M %d-%m-%y")<CR>P
+:nnoremap <F5> "=strftime("%Y-%m-%d %A %H:%M")<CR>P
+
 " backup settings
 set backup
 set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
