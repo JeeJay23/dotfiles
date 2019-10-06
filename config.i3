@@ -186,7 +186,6 @@ bindsym $mod+Escape exec gnome-screensaver-command --lock
 bindsym $mod+Shift+s exec systemctl suspend
 
 # shortcuts for common system configuration tasks
-bindsym $mod+c exec gnome-control-center
 bindsym $mod+w exec gnome-control-center wifi
 bindsym $mod+b exec gnome-control-center bluetooth
 bindsym $mod+d exec gnome-control-center display
@@ -333,10 +332,11 @@ for_window [instance="floatterm"] move position 50 50
 
 exec rxvt -name floatterm
 
-# Custom keybinds
+# custom keybinds
 bindsym $mod+Shift+x exec shutdown.sh
-bindsym $mod+e exec rxvt -e ranger;
+bindsym $mod+e exec rxvt -e ranger
 bindsym $mod+n exec rxvt -e newsboat
+bindsym $mod+c exec rxvt -e cmus
 bindsym $mod+u [instance="floatterm"] scratchpad show
 bindsym $mod+Mod1+Return exec rxvt -name floatterm
 
