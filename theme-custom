@@ -1,2 +1,2 @@
-#define gtk_theme       Adwaita-dark
-#define icon_theme      /how/silver/.themes/oomox-colors-oomox
+#define gtk_theme       oomox-colors-oomox
+#define icon_theme      Adwaita-dark
