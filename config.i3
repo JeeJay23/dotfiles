@@ -54,6 +54,12 @@ set $ws19 "19:XIX"
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
+# mod + mouse middle click to close window
+bindsym --release --whole-window $mod+button2 kill
+
+# mod + right click to float window
+bindsym --whole-window $mod+button1 floating toggle
+
 hide_edge_borders smart
 
 # start a terminal
@@ -107,9 +113,6 @@ bindsym $mod+plus gaps inner current plus 6
 bindsym $mod+Shift+plus gaps outer current plus 6
 bindsym $mod+Shift+minus gaps outer current minus 6
 
-# show/hide keybindings
-bindsym $mod+Shift+question exec --no-startup-id /usr/bin/conky-toggle.sh
-
 # toggle tiling / floating
 bindsym $mod+Shift+f floating toggle
 
@@ -117,7 +120,8 @@ bindsym $mod+Shift+f floating toggle
 bindsym $mod+Shift+t focus mode_toggle
 
 # toggle tabbed mode
-bindsym $mod+t layout toggle tabbed splith splitv
+bindsym $mod+t layout toggle tabbed 
+bindsym $mod+v layout toggle splith splitv
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -168,7 +172,10 @@ bindsym $mod+Shift+Ctrl+9 move container to workspace $ws19
 bindsym $mod+Shift+grave move container to workspace $ws20
 
 # custom binding to workspaces
-# assign [class="Firefox"] $ws1
+for_window [class="Spotify"] move to workspace $ws10
+for_window [class="Slack"] move to workspace $ws9
+for_window [class="discord"] move to workspace $ws9
+for_window [class="Eog"] floating enable
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -297,9 +304,6 @@ client.background       $c0
 # Enable popup during fullscreen
 popup_during_fullscreen smart
 
-# window focus follows your mouse movements as the mouse crosses window borders
-#focus_follows_mouse no
-
 exec_always --no-startup-id /home/silver/.config/polybar/launch.sh
 
 # Configure the bar
@@ -330,7 +334,7 @@ for_window [instance="floatterm"] move scratchpad; scratchpad show
 for_window [instance="floatterm"] resize set 1200 800
 for_window [instance="floatterm"] move position 50 50
 
-exec rxvt -name floatterm
+for_window [class="mpv"] floating enable, resize set 1170 660, move position center
 
 # custom keybinds
 bindsym $mod+Shift+x exec shutdown.sh
@@ -339,12 +343,10 @@ bindsym $mod+n exec rxvt -e newsboat
 bindsym $mod+c exec rxvt -e cmus
 bindsym $mod+u [instance="floatterm"] scratchpad show
 bindsym $mod+Mod1+Return exec rxvt -name floatterm
+bindsym $mod+m exec cmus-remote -u
 
 # Composite manager
 exec --no-startup-id compton -f --config /etc/xdg/compton.conf
-
-# Launch the shortcut Conky window on first login
-exec --no-startup-id /usr/bin/regolith-ftue.sh
 
 # Hide the mouse pointer if unused for a duration
 exec --no-startup-id /usr/bin/unclutter -b
