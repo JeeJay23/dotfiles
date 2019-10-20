@@ -20,6 +20,7 @@ Plug 'dag/vim-fish'
 Plug 'easymotion/vim-easymotion'
 Plug 'kien/ctrlp.vim'
 Plug 'jiangmiao/auto-pairs'
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
 call plug#end()
 
 " MISC
@@ -72,6 +73,17 @@ set backupskip=/tmp/*,/private/tmp/*
 set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set writebackup
 
+" Spellchecking
+nnoremap <leader>p z=
+" turn on spellchecking for markdown files
+autocmd BufRead,BufNewFile *.md setlocal spell
+set complete+=kspell
+
+" markdown preview
+
+nmap <leader>mp <Plug>MarkdownPreviewToggle
+
+
 " PLUGIN SETTINGS
 
 let g:ctrlp_match_window = 'bottom,order:ttb'
@@ -81,6 +93,9 @@ let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
 
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
+
+" close preview window after exiting insert mode
+let g:ycm_autoclose_preview_window_after_insertion = 1
 
 nmap s <Plug>(easymotion-overwin-f2)
 
