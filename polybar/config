@@ -97,6 +97,11 @@ label-indicator-margin = 1
 label-indicator-background = ${colors.secondary}
 label-indicator-underline = ${colors.secondary}
 
+[module/cmus]
+type = custom/script
+exec = ~/.config/polybar/player-cmus.sh
+interval = 5
+
 [module/filesystem]
 type = internal/fs
 interval = 25
