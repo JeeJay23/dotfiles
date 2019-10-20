@@ -57,8 +57,8 @@ floating_modifier $mod
 # mod + mouse middle click to close window
 bindsym --release --whole-window $mod+button2 kill
 
-# mod + right click to float window
-bindsym --whole-window $mod+button1 floating toggle
+# mod + shift + left click to float window
+bindsym --whole-window $mod+Shift+button1 floating toggle
 
 hide_edge_borders smart
 
