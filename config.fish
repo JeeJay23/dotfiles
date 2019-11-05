@@ -7,6 +7,7 @@ abbr -a gc 'cd ~/repos/dotfiles'
 abbr -a gco 'git checkout'
 abbr -a gf 'git fetch'
 abbr -a gp 'git push'
+abbr -a gs 'git status'
 abbr -a mkd 'mkdir -pv'
 abbr -a r ranger
 abbr -a s 'sudo apt-get'
