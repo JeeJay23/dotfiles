@@ -79,10 +79,16 @@ set writebackup
 nnoremap <leader>p z=
 " turn on spellchecking for markdown files
 autocmd BufRead,BufNewFile *.md setlocal spell
+autocmd BufRead,BufNewFile *.md set spelllang=nl,en_us
 set complete+=kspell
 
 " markdown preview
 
+command! -nargs=* RunSilent
+    \ | execute ':silent !'.'<args>'
+    \ | execute ':redraw!'
+nmap <leader>pc :RunSilent pandoc -o /tmp/vim-pandoc-out.pdf %<CR>
+nmap <Leader>pp :RunSilent zathura /tmp/vim-pandoc-out.pdf<CR>
 
 
 " PLUGIN SETTINGS
@@ -99,7 +105,8 @@ let g:airline_powerline_fonts = 1
 let g:ycm_autoclose_preview_window_after_insertion = 1
 
 nmap <leader>mp <Plug>MarkdownPreviewToggle
-map <Space><Space> <Plug>(easymotion-jumptoanywhere)
+
+set mouse=a
 
 " AUTOCMDS
 
