@@ -1,2 +1,3 @@
-#define gtk_theme       oomox-colors-oomox
+!#define gtk_theme       oomox-colors-oomox
+#define gtk_theme       Yaru-dark
 #define icon_theme      Adwaita-dark
