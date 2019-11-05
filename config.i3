@@ -30,27 +30,6 @@ set $ws17 "17:XVII"
 set $ws18 "18:XIIX"
 set $ws19 "19:XIX"
 
-# Roman Numbers
-#set $ws1 "1:I"
-#set $ws2 "2:II"
-#set $ws3 "3:III"
-#set $ws4 "4:IV"
-#set $ws5 "5:V"
-#set $ws6 "6:VI"
-#set $ws7 "7:VII"
-#set $ws8 "8:IIX"
-#set $ws9 "9:IX"
-#set $ws10 "10:X"
-#set $ws11 "11:XI"
-#set $ws12 "12:XII"
-#set $ws13 "13:XIII"
-#set $ws14 "14:XIV"
-#set $ws15 "15:XV"
-#set $ws16 "16:XVI"
-#set $ws17 "17:XVII"
-#set $ws18 "18:XIIX"
-#set $ws19 "19:XIX"
-
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
@@ -176,6 +155,7 @@ for_window [class="Spotify"] move to workspace $ws10
 for_window [class="Slack"] move to workspace $ws9
 for_window [class="discord"] move to workspace $ws9
 for_window [class="Eog"] floating enable
+for_window [class="Places"] floating enable
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
