@@ -62,6 +62,8 @@ nnoremap <C-k> :bprevious<CR>
 nnoremap <leader>ev :vsp $MYVIMRC<CR> " edit vim keybinds
 nnoremap <leader>s :mksession<CR> " saves session to be opened by vim -S
 
+nnoremap f H:call EasyMotion#WB(0, 0)<CR>
+
 " easy insert date
 " :nnoremap <F5> "=strftime("%A, %H:%M %d-%m-%y")<CR>P
 :nnoremap <F5> "=strftime("%Y-%m-%d %A %H:%M")<CR>P
@@ -81,7 +83,6 @@ set complete+=kspell
 
 " markdown preview
 
-nmap <leader>mp <Plug>MarkdownPreviewToggle
 
 
 " PLUGIN SETTINGS
@@ -97,7 +98,8 @@ let g:airline_powerline_fonts = 1
 " close preview window after exiting insert mode
 let g:ycm_autoclose_preview_window_after_insertion = 1
 
-nmap s <Plug>(easymotion-overwin-f2)
+nmap <leader>mp <Plug>MarkdownPreviewToggle
+map <Space><Space> <Plug>(easymotion-jumptoanywhere)
 
 " AUTOCMDS
 
