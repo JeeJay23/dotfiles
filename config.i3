@@ -218,7 +218,7 @@ gaps inner 12
 gaps outer 1
 
 # Only enable gaps on a workspace when there is at least one container
-# smart_gaps on
+smart_gaps on
 
 set_from_resource $focused.color.border i3-wm.client.focused.color.border "#002b36"
 set_from_resource $focused.color.background i3-wm.client.focused.color.background "#586e75"
