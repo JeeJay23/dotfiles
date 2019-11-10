@@ -51,13 +51,19 @@ map <leader>f :Goyo<CR> " zen mode
 map j gj
 map k gk
 
+"Better window navigation
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-h> <C-w>h
+nnoremap <C-l> <C-w>l
+
 " move to beginning eol
 nnoremap B ^
 nnoremap E $
 
 " easy buffer switching
-nnoremap <C-j> :bnext<CR>
-nnoremap <C-k> :bprevious<CR>
+nnoremap <leader>j :bnext<CR>
+nnoremap <leader>k :bprevious<CR>
 
 nnoremap <leader>ev :vsp $MYVIMRC<CR> " edit vim keybinds
 nnoremap <leader>s :mksession<CR> " saves session to be opened by vim -S
