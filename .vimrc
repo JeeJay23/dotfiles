@@ -94,7 +94,7 @@ command! -nargs=* RunSilent
     \ | execute ':silent !'.'<args>'
     \ | execute ':redraw!'
 nmap <leader>pc :RunSilent pandoc -o /tmp/vim-pandoc-out.pdf %<CR>
-nmap <Leader>pp :RunSilent zathura /tmp/vim-pandoc-out.pdf<CR>
+nmap <Leader>pp :RunSilent zathura /tmp/vim-pandoc-out.pdf &<CR>
 
 
 " PLUGIN SETTINGS
