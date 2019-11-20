@@ -43,6 +43,7 @@ set incsearch " start searching while typing
 set hlsearch " highlight matches
 set foldenable
 set foldlevelstart=10
+set mouse=a
 
 " KEYBINDS
 
@@ -93,9 +94,9 @@ set complete+=kspell
 command! -nargs=* RunSilent
     \ | execute ':silent !'.'<args>'
     \ | execute ':redraw!'
-nmap <leader>pc :RunSilent pandoc -o /tmp/vim-pandoc-out.pdf %<CR>
-nmap <Leader>pp :RunSilent zathura /tmp/vim-pandoc-out.pdf &<CR>
 
+nmap <leader>pc :RunSilent pandoccer % /tmp/vim-pandoc-out.pdf<CR>
+nmap <Leader>pp :RunSilent zathura /tmp/vim-pandoc-out.pdf &<CR>
 
 " PLUGIN SETTINGS
 
@@ -109,10 +110,15 @@ let g:airline_powerline_fonts = 1
 
 " close preview window after exiting insert mode
 let g:ycm_autoclose_preview_window_after_insertion = 1
+let g:ycm_always_populate_location_list = 1
+let g:ycm_global_ycm_extra_conf = '~/repos/dotfiles/.ycm_extra_conf.py'
+
+" YCM Keybinds
+
+autocmd FileType cpp nnoremap <buffer> gd :YcmCompleter GoTo<CR>
+autocmd FileType cpp nnoremap <buffer> gF :YcmCompleter Format<CR>
 
 nmap <leader>mp <Plug>MarkdownPreviewToggle
-
-set mouse=a
 
 " AUTOCMDS
 

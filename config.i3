@@ -167,7 +167,7 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exit
 
 # lock the screen
-bindsym $mod+Escape exec gnome-screensaver-command --lock
+# bindsym $mod+Escape exec gnome-screensaver-command --lock
 
 # put the system to sleep
 bindsym $mod+Shift+s exec systemctl suspend
