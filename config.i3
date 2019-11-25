@@ -5,8 +5,6 @@
 # Alt key is Mod1, and Windows key is Mod4
 set $mod Mod4
 
-# Color values are defined in ~/.Xresources-regolith
-
 exec "wal -R"
 
 # Kanji Numbers
@@ -315,6 +313,7 @@ for_window [instance="floatterm"] resize set 1200 800
 for_window [instance="floatterm"] move position 50 50
 
 for_window [class="mpv"] floating enable, resize set 1170 660, move position center
+for_window [class="evolution-alarm-notify"] floating enable, resize set 1170 660, move position center
 
 # custom keybinds
 bindsym $mod+Shift+x exec shutdown.sh

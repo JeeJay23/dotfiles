@@ -11,7 +11,7 @@ abbr -a gs 'git status'
 abbr -a mkd 'mkdir -pv'
 abbr -a r ranger
 abbr -a s 'sudo apt-get'
-abbr -a sn 'shutdown now'
+abbr -a sn 'myshutdown'
 abbr -a v vim
 abbr -a ws '/home/silver/repos/pipes.sh/bin/bin/pipes.sh -p 3 -t 5 -r 3000 -R'
 abbr -a xc 'xclip -sel clip'
