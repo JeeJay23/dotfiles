@@ -21,6 +21,8 @@ Plug 'easymotion/vim-easymotion'
 Plug 'kien/ctrlp.vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
+Plug 'ayu-theme/ayu-vim' 
+Plug 'vim-airline/vim-airline-themes'
 call plug#end()
 
 " MISC
@@ -29,6 +31,7 @@ set nocompatible
 filetype plugin indent on
 syntax on
 
+let ayucolor="dark"
 colorscheme wal
 
 set number
@@ -47,6 +50,7 @@ set mouse=a
 
 " KEYBINDS
 
+nnoremap <F6> :buffers<CR>:buffer<Space>
 map <leader>f :Goyo<CR> " zen mode
 " move by visual line
 map j gj
@@ -89,6 +93,9 @@ autocmd BufRead,BufNewFile *.md setlocal spell
 autocmd BufRead,BufNewFile *.md set spelllang=nl,en_us
 set complete+=kspell
 
+" set wrap width
+au BufRead,BufNewFile *.md setlocal textwidth=100
+
 " markdown preview
 
 command! -nargs=* RunSilent
@@ -112,6 +119,10 @@ let g:airline_powerline_fonts = 1
 let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_always_populate_location_list = 1
 let g:ycm_global_ycm_extra_conf = '~/repos/dotfiles/.ycm_extra_conf.py'
+
+let g:vim_markdown_toc_autofit = 1
+
+let g:goyo_width = 101
 
 " YCM Keybinds
 

@@ -8,16 +8,36 @@ set $mod Mod4
 exec "wal -R"
 
 # Kanji Numbers
-set $ws1 "1:一"
-set $ws2 "2:二"
-set $ws3 "3:三"
-set $ws4 "4:四"
-set $ws5 "5:五"
-set $ws6 "6:六"
-set $ws7 "7:七"
-set $ws8 "8:八"
-set $ws9 "9:九"
-set $ws10 "10:十"
+# set $ws1 "1:一"
+# set $ws2 "2:二"
+# set $ws3 "3:三"
+# set $ws4 "4:四"
+# set $ws5 "5:五"
+# set $ws6 "6:六"
+# set $ws7 "7:七"
+# set $ws8 "8:八"
+# set $ws9 "9:九"
+# set $ws10 "10:十"
+# set $ws11 "11:XI"
+# set $ws12 "12:XII"
+# set $ws13 "13:XIII"
+# set $ws14 "14:XIV"
+# set $ws15 "15:XV"
+# set $ws16 "16:XVI"
+# set $ws17 "17:XVII"
+# set $ws18 "18:XIIX"
+# set $ws19 "19:XIX"
+
+set $ws1 "1:I"
+set $ws2 "2:II"
+set $ws3 "3:III"
+set $ws4 "4:IV"
+set $ws5 "5:V"
+set $ws6 "6:VI"
+set $ws7 "7:VII"
+set $ws8 "8:IIX"
+set $ws9 "9:IX"
+set $ws10 "10:X"
 set $ws11 "11:XI"
 set $ws12 "12:XII"
 set $ws13 "13:XIII"
@@ -318,7 +338,6 @@ for_window [class="evolution-alarm-notify"] floating enable, resize set 1170 660
 # custom keybinds
 bindsym $mod+Shift+x exec shutdown.sh
 bindsym $mod+e exec rxvt -e ranger
-bindsym $mod+n exec rxvt -e newsboat
 bindsym $mod+c exec rxvt -e cmus
 bindsym $mod+u [instance="floatterm"] scratchpad show
 bindsym $mod+Mod1+Return exec rxvt -name floatterm

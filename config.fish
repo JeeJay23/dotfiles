@@ -1,6 +1,7 @@
 alias ls="ls -hN --color=auto --group-directories-first"
 
 abbr -a aptL 'apt list --installed | less'
+abbr -a sa 'sudo apt-get'
 abbr -a e exit
 abbr -a g git
 abbr -a gc 'git commit -m '
@@ -16,6 +17,8 @@ abbr -a v vim
 abbr -a ws '/home/silver/repos/pipes.sh/bin/bin/pipes.sh -p 3 -t 5 -r 3000 -R'
 abbr -a xc 'xclip -sel clip'
 abbr -a t 'task'
+abbr -a qnd '~/notebook/quick-notes/'
+abbr -a qn 'vim ~/notebook/quick-notes/quick.md'
 
 function fish_greeting
     date +%B\ %d\ -\ %A
