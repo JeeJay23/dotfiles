@@ -1,7 +1,7 @@
 @import url('file:///home/silver/.cache/wal/colors.css');
 
 * {
-  font-family: "Fira Code Retina" !important;
+  font-family: "JetBrains Mono" !important;
 }
 
 .titlebar-spacer[type="post-tabs"]{ 

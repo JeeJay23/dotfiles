@@ -23,6 +23,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
 Plug 'ayu-theme/ayu-vim' 
 Plug 'vim-airline/vim-airline-themes'
+Plug 'preservim/nerdtree'
 call plug#end()
 
 " MISC
@@ -47,6 +48,7 @@ set hlsearch " highlight matches
 set foldenable
 set foldlevelstart=10
 set mouse=a
+set nowrap
 
 " KEYBINDS
 
@@ -123,6 +125,8 @@ let g:ycm_global_ycm_extra_conf = '~/repos/dotfiles/.ycm_extra_conf.py'
 let g:vim_markdown_toc_autofit = 1
 
 let g:goyo_width = 101
+
+map <C-e> :NERDTreeToggle<CR>
 
 " YCM Keybinds
 

@@ -6,7 +6,7 @@ URxvt.cursorBlink:       true
 !URxvt.background:        color_base03
 !URxvt.cursorColor:       color_base1
 URxvt.transparent:       false
-URxvt.blurRadius:        30
+URxvt.blurRadius:        5
 
 !! extensions
 URxvt.perl-ext-common:   default,url-select,keyboard-select

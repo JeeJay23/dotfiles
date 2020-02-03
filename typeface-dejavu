@@ -1,4 +1,4 @@
 #define typeface_bar_glyph  Terminus (TTF)
 #define typeface_bar        xft:Terminus (TTF), FontAwesome 13
 #define typeface_rofi       Terminus (TTF) 15
-#define typeface_terminal   xft:Terminus (TTF):size=15
+#define typeface_terminal   xft:JetBrains Mono:size=13:antialias=true,xft:Terminus (TTF):size=13

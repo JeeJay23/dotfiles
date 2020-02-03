@@ -28,25 +28,25 @@ exec "wal -R"
 # set $ws18 "18:XIIX"
 # set $ws19 "19:XIX"
 
-set $ws1 "1:I"
-set $ws2 "2:II"
-set $ws3 "3:III"
-set $ws4 "4:IV"
-set $ws5 "5:V"
-set $ws6 "6:VI"
-set $ws7 "7:VII"
-set $ws8 "8:IIX"
-set $ws9 "9:IX"
-set $ws10 "10:X"
-set $ws11 "11:XI"
-set $ws12 "12:XII"
-set $ws13 "13:XIII"
-set $ws14 "14:XIV"
-set $ws15 "15:XV"
-set $ws16 "16:XVI"
-set $ws17 "17:XVII"
-set $ws18 "18:XIIX"
-set $ws19 "19:XIX"
+set $ws1 "1:1"
+set $ws2 "2:2"
+set $ws3 "3:3"
+set $ws4 "4:4"
+set $ws5 "5:5"
+set $ws6 "6:6"
+set $ws7 "7:7"
+set $ws8 "8:8"
+set $ws9 "9:9"
+set $ws10 "10:10"
+set $ws11 "11:11"
+set $ws12 "12:12"
+set $ws13 "13:13"
+set $ws14 "14:14"
+set $ws15 "15:15"
+set $ws16 "16:16"
+set $ws17 "17:17"
+set $ws18 "18:18"
+set $ws19 "19:19"
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -330,13 +330,13 @@ exec_always --no-startup-id /home/silver/.config/polybar/launch.sh
 for_window [instance="floatterm"] floating enable
 for_window [instance="floatterm"] move scratchpad; scratchpad show
 for_window [instance="floatterm"] resize set 1200 800
-for_window [instance="floatterm"] move position 50 50
+for_window [instance="floatterm"] move position center
 
 for_window [class="mpv"] floating enable, resize set 1170 660, move position center
 for_window [class="evolution-alarm-notify"] floating enable, resize set 1170 660, move position center
 
 # custom keybinds
-bindsym $mod+Shift+x exec shutdown.sh
+bindsym $mod+Shift+x move position center
 bindsym $mod+e exec rxvt -e ranger
 bindsym $mod+c exec rxvt -e cmus
 bindsym $mod+u [instance="floatterm"] scratchpad show

@@ -11,6 +11,8 @@ abbr -a gp 'git push'
 abbr -a gs 'git status'
 abbr -a mkd 'mkdir -pv'
 abbr -a r ranger
+abbr -a p python
+abbr -a p3 python3
 abbr -a s 'sudo apt-get'
 abbr -a sn 'myshutdown'
 abbr -a v vim
