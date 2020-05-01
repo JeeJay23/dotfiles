@@ -1,0 +1,53 @@
+{
+    "workbench.colorTheme": "Cobalt Next",
+    "vim.easymotion": true,
+    "editor.lineNumbers": "relative",
+    "window.zoomLevel": 1,
+    "editor.minimap.enabled": false,
+    "editor.fontFamily": "'JetBrains Mono', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+    "keyboard.dispatch": "keyCode",
+    "vim.foldfix": true,
+    "editor.fontLigatures": true,
+    "editor.fontSize": 13,
+    "vim.vimrc.enable": true,
+    "vim.vimrc.path": "/home/silver/.vimrc",
+    "vim.leader": "space",
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": ["<leader>", "j"],
+            "commands": [
+                "workbench.action.nextEditor"
+            ]
+        },
+        {
+            "before": ["<leader>", "k"],
+            "commands": [
+                "workbench.action.previousEditor"
+            ]
+        },
+        {
+            "before":["<C-n>"],
+            "commands": [
+                "workbench.view.explorer"
+            ]
+        },
+        {
+            "before":["<C-o>"],
+            "commands": [
+                "workbench.action.openView"
+            ]
+        }
+    ],
+    "workbench.iconTheme": "vscode-icons",
+    "workbench.activityBar.visible": true,
+    "emmet.includeLanguages": {
+        "jinja-html": "html"
+    },
+    "window.menuBarVisibility": "toggle",
+    "rewrap.wrappingColumn": 99,
+    "editor.matchBrackets": false,
+    "cSpell.dictionaries": [
+        "en,nl"
+    ],
+    "vsicons.dontShowNewVersionMessage": true
+}
