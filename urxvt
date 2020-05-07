@@ -12,6 +12,6 @@ URxvt.blurRadius:        5
 URxvt.perl-ext-common:   default,url-select,keyboard-select
 URxvt.colorUL:           color_cyan
 URxvt.keysym.M-u:        perl:url-select:select_next
-URxvt.url-select.launcher: firefox
+URxvt.url-select.launcher: brave-browser
 URxvt.url-select.underline: true
 URxvt.keysym.M-Escape:   perl:keyboard-select:activate

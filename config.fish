@@ -13,7 +13,6 @@ abbr -a mkd 'mkdir -pv'
 abbr -a r ranger
 abbr -a p python
 abbr -a p3 python3
-abbr -a s 'sudo apt-get'
 abbr -a sn 'myshutdown'
 abbr -a v vim
 abbr -a ws '/home/silver/repos/pipes.sh/bin/bin/pipes.sh -p 3 -t 5 -r 3000 -R'
@@ -23,8 +22,9 @@ abbr -a qnd '~/notebook/quick-notes/'
 abbr -a qn 'vim ~/notebook/quick-notes/quick.md'
 
 function fish_greeting
-    date +%B\ %d\ -\ %A
+        #date +%B\ %d\ -\ %A
 end
 
 uncap
 cat ~/.cache/wal/sequences
+set PATH $PATH /home/silver/scripts/

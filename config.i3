@@ -63,7 +63,7 @@ hide_edge_borders smart
 bindsym $mod+Return exec rxvt
 
 # start a web browser
-bindsym $mod+Shift+Return exec /usr/bin/sensible-browser
+bindsym $mod+Shift+Return exec brave-browser
 
 # kill focused window
 bindsym $mod+q kill
@@ -73,7 +73,7 @@ set_from_resource $rofiTheme rofi.theme "regolith-theme"
 # rofi app and window launchers
 bindsym $mod+space exec rofi -show drun -theme $rofiTheme
 bindsym $mod+Shift+space exec rofi -show run -theme $rofiTheme
-bindsym $mod+Ctrl+space exec rofi -show window -theme $rofiTheme
+bindsym $mod+w exec rofi -show window -theme $rofiTheme
 
 # change focus
 bindsym $mod+Left focus left
@@ -185,13 +185,13 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exit
 
 # lock the screen
-# bindsym $mod+Escape exec gnome-screensaver-command --lock
+bindsym $mod+Escape exec /home/silver/scripts/lockscreen.sh
 
 # put the system to sleep
 bindsym $mod+Shift+s exec systemctl suspend
 
 # shortcuts for common system configuration tasks
-bindsym $mod+w exec gnome-control-center wifi
+# bindsym $mod+w exec gnome-control-center wifi
 bindsym $mod+b exec gnome-control-center bluetooth
 bindsym $mod+d exec gnome-control-center display
 bindsym $mod+p exec gnome-control-center power
