@@ -21,10 +21,11 @@ abbr -a t 'task'
 abbr -a qnd '~/notebook/quick-notes/'
 abbr -a qn 'vim ~/notebook/quick-notes/quick.md'
 
+set PATH ~/.local/bin $PATH
+
 function fish_greeting
-        #date +%B\ %d\ -\ %A
+
 end
 
-uncap
 cat ~/.cache/wal/sequences
 set PATH $PATH /home/silver/scripts/
