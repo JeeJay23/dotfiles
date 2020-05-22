@@ -1,5 +1,5 @@
 {
-    "workbench.colorTheme": "Cobalt Next",
+    "workbench.colorTheme": "Noctis",
     "vim.easymotion": true,
     "editor.lineNumbers": "relative",
     "window.zoomLevel": 1,
@@ -36,6 +36,12 @@
             "commands": [
                 "workbench.action.openView"
             ]
+        },
+        {
+            "before":["<C-w>", "f"],
+            "commands":[
+                "workbench.action.minimizeOtherEditors"
+            ]
         }
     ],
     "workbench.iconTheme": "vscode-icons",
@@ -49,5 +55,7 @@
     "cSpell.dictionaries": [
         "en,nl"
     ],
-    "vsicons.dontShowNewVersionMessage": true
+    "vsicons.dontShowNewVersionMessage": true,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "workbench.editor.scrollToSwitchTabs": true
 }

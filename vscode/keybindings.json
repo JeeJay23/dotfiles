@@ -18,5 +18,5 @@
         "key": "ctrl+o",
         "command": "workbench.action.openView",
         "when": "!editorFocus"
-    }
+    },
 ]
