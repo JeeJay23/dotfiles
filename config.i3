@@ -60,7 +60,7 @@ bindsym --whole-window $mod+Shift+button1 floating toggle
 hide_edge_borders smart
 
 # start a terminal
-bindsym $mod+Return exec rxvt
+bindsym $mod+Return exec kitty
 
 # start a web browser
 bindsym $mod+Shift+Return exec brave-browser
