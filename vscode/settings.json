@@ -42,12 +42,15 @@
             "commands":[
                 "workbench.action.minimizeOtherEditors"
             ]
+<<<<<<< HEAD
         },
         {
             "before":["<C-w>", "t"],
             "commands":[
                 "workbench.action.toggleEditorWidths"
             ]
+=======
+>>>>>>> ea9859060552d698b74524f20eceb74d6110c180
         }
     ],
     "workbench.iconTheme": "vscode-icons",
@@ -62,5 +65,11 @@
         "en,nl"
     ],
     "vsicons.dontShowNewVersionMessage": true,
+<<<<<<< HEAD
     "python.showStartPage": false
 }
+=======
+    "diffEditor.ignoreTrimWhitespace": false,
+    "workbench.editor.scrollToSwitchTabs": true
+}
+>>>>>>> ea9859060552d698b74524f20eceb74d6110c180
