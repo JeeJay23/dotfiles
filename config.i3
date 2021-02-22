@@ -68,12 +68,12 @@ bindsym $mod+Shift+Return exec brave-browser
 # kill focused window
 bindsym $mod+q kill
 
-set_from_resource $rofiTheme rofi.theme "regolith-theme"
+# set_from_resource $rofiTheme rofi.theme "regolith-theme"
 
 # rofi app and window launchers
-bindsym $mod+space exec rofi -show drun -theme $rofiTheme
-bindsym $mod+Shift+space exec rofi -show run -theme $rofiTheme
-bindsym $mod+w exec rofi -show window -theme $rofiTheme
+bindsym $mod+space exec rofi -show drun
+bindsym $mod+Shift+space exec rofi -show run
+bindsym $mod+w exec rofi -show window
 
 # change focus
 bindsym $mod+Left focus left
@@ -337,8 +337,8 @@ for_window [class="evolution-alarm-notify"] floating enable, resize set 1170 660
 
 # custom keybinds
 bindsym $mod+Shift+x move position center
-bindsym $mod+e exec rxvt -e ranger
-bindsym $mod+c exec rxvt -e cmus
+bindsym $mod+e exec kitty -e ranger
+bindsym $mod+c exec kitty -e cmus
 bindsym $mod+u [instance="floatterm"] scratchpad show
 bindsym $mod+Mod1+Return exec rxvt -name floatterm
 bindsym $mod+m exec cmus-remote -u

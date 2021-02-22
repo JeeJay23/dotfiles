@@ -1,5 +1,5 @@
 {
-    "workbench.colorTheme": "Cobalt Next",
+    "workbench.colorTheme": "Noctis Obscuro",
     "vim.easymotion": true,
     "editor.lineNumbers": "relative",
     "window.zoomLevel": 1,
@@ -36,10 +36,22 @@
             "commands": [
                 "workbench.action.openView"
             ]
+        },
+        {
+            "before":["<C-w>", "f"],
+            "commands":[
+                "workbench.action.minimizeOtherEditors"
+            ]
+        },
+        {
+            "before":["<C-w>", "t"],
+            "commands":[
+                "workbench.action.toggleEditorWidths"
+            ]
         }
     ],
     "workbench.iconTheme": "vscode-icons",
-    "workbench.activityBar.visible": true,
+    "workbench.activityBar.visible": false,
     "emmet.includeLanguages": {
         "jinja-html": "html"
     },
@@ -49,5 +61,6 @@
     "cSpell.dictionaries": [
         "en,nl"
     ],
-    "vsicons.dontShowNewVersionMessage": true
+    "vsicons.dontShowNewVersionMessage": true,
+    "python.showStartPage": false
 }
