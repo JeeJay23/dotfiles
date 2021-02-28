@@ -1,5 +1,11 @@
 let mapleader =" "
 
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
 " Let vim use a posix compliant shell instead of fish
 if &shell =~# 'fish$'
     set shell=sh
@@ -8,7 +14,6 @@ endif
 " PLUGINS
 
 call plug#begin('~/.vim/plugged')
-Plug 'dylanaraps/wal.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'PotatoesMaster/i3-vim-syntax'
 Plug 'vim-python/python-syntax'
@@ -33,7 +38,6 @@ filetype plugin indent on
 syntax on
 
 let ayucolor="dark"
-colorscheme wal
 
 set number
 set relativenumber

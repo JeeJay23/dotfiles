@@ -27,5 +27,5 @@ function fish_greeting
 
 end
 
-cat ~/.cache/wal/sequences
+# cat ~/.cache/wal/sequences
 set PATH $PATH /home/silver/scripts/
