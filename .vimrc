@@ -52,7 +52,8 @@ set hlsearch " highlight matches
 set foldenable
 set foldlevelstart=10
 set mouse=a
-set nowrap
+set wrap
+set linebreak
 
 " KEYBINDS
 

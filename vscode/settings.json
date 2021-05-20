@@ -1,5 +1,5 @@
 {
-    "workbench.colorTheme": "Noctis Obscuro",
+    "workbench.colorTheme": "Dracula",
     "vim.easymotion": true,
     "editor.lineNumbers": "relative",
     "window.zoomLevel": 1,
@@ -10,7 +10,7 @@
     "editor.fontLigatures": true,
     "editor.fontSize": 13,
     "vim.vimrc.enable": true,
-    "vim.vimrc.path": "/home/silver/.vimrc",
+    "vim.vimrc.path": "/home/jader/.vimrc",
     "vim.leader": "space",
     "vim.normalModeKeyBindingsNonRecursive": [
         {
@@ -42,15 +42,12 @@
             "commands":[
                 "workbench.action.minimizeOtherEditors"
             ]
-<<<<<<< HEAD
         },
         {
             "before":["<C-w>", "t"],
             "commands":[
                 "workbench.action.toggleEditorWidths"
             ]
-=======
->>>>>>> ea9859060552d698b74524f20eceb74d6110c180
         }
     ],
     "workbench.iconTheme": "vscode-icons",
@@ -65,11 +62,8 @@
         "en,nl"
     ],
     "vsicons.dontShowNewVersionMessage": true,
-<<<<<<< HEAD
-    "python.showStartPage": false
-}
-=======
+    "python.showStartPage": false,
     "diffEditor.ignoreTrimWhitespace": false,
     "workbench.editor.scrollToSwitchTabs": true
 }
->>>>>>> ea9859060552d698b74524f20eceb74d6110c180
+   
